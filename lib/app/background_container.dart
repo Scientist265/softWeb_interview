@@ -16,7 +16,7 @@ class BackgroundContainer extends StatelessWidget {
           begin: Alignment.topRight,
           end: Alignment.center,
           colors: [
-            AppColors.cardGradintColorTwo.withOpacity(0.2),
+            AppColors.cardGradintColorTwo.withOpacity(0.1),
             AppColors.black,
             AppColors.black,
             AppColors.cardGradintColorfour,
