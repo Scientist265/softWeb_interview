@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:interview_one/common/extensions.dart';
+import 'package:interview_one/view/auth/widgets/otp_widget.dart';
 import '../../app/app_style.dart';
 import '../../app/reusable_text.dart';
 import '../../core/config/theme/colors.dart';
@@ -17,6 +18,7 @@ class VerifyOtpPage extends StatefulWidget {
 
 class _VerifyOtpPageState extends State<VerifyOtpPage> {
   final _otpController = TextEditingController();
+
   @override
   void dispose() {
     _otpController.dispose();
@@ -67,6 +69,7 @@ class _VerifyOtpPageState extends State<VerifyOtpPage> {
                 FontWeight.w500,
               ),
             ),
+            OtpWidget(controller: _otpController)
           ],
         );
       }),

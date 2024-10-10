@@ -6,6 +6,7 @@ import 'package:interview_one/app/app_style.dart';
 import 'package:interview_one/app/reusable_text.dart';
 import 'package:interview_one/common/extensions.dart';
 import 'package:interview_one/core/config/theme/colors.dart';
+import 'package:interview_one/view/auth/login_screen.dart';
 
 class SignUPHeader extends StatelessWidget {
   const SignUPHeader({
@@ -35,17 +36,22 @@ class SignUPHeader extends StatelessWidget {
             ],
           ),
         ),
-        Text(
-          "Sign in instead",
-          style: TextStyle(
-              fontSize: 18.sp,
-              fontFamily: "Aeonik",
-              decoration: TextDecoration.underline,
-              decorationColor: AppColors.cardGradintColorTwo,
-              decorationThickness: 1,
-              color: HexColor("#EF6C57")
-              // foreground: Paint()..shader = linearGradient
-              ),
+        GestureDetector(
+          onTap: () {
+            Navigator.of(context).pushNamed(LoginScreen.routeName);
+          },
+          child: Text(
+            "Sign in instead",
+            style: TextStyle(
+                fontSize: 18.sp,
+                fontFamily: "Aeonik",
+                decoration: TextDecoration.underline,
+                decorationColor: AppColors.cardGradintColorTwo,
+                decorationThickness: 1,
+                color: HexColor("#EF6C57")
+                // foreground: Paint()..shader = linearGradient
+                ),
+          ),
         ),
       ],
     );
