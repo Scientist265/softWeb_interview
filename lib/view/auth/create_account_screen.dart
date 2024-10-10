@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:interview_one/app/background_container.dart';
 import 'package:interview_one/common/extensions.dart';
+import 'package:interview_one/core/config/theme/colors.dart';
 import 'package:interview_one/view/auth/signup.dart';
 import 'package:interview_one/view/auth/verify_otp_page.dart';
 import 'package:interview_one/view/entrypoint/entry.dart';
@@ -20,12 +21,13 @@ class CreateAccountScreen extends ConsumerWidget {
 
     return SafeArea(
       child: Scaffold(
+        // backgroundColor: AppColors.black,
         body: BackgroundContainer(
           child: Column(
             children: [
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.all(12.0),
                   child: currentStep == 1
                       ? const SignUpPage()
                       : const VerifyOtpPage(),

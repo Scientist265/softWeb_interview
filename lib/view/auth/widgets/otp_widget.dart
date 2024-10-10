@@ -26,10 +26,10 @@ class OtpWidget extends StatelessWidget {
             width: 46.w,
             textStyle: appStyle(18, AppColors.white, FontWeight.w500),
             decoration: BoxDecoration(
-                color: AppColors.fillColor,
+                color: AppColors.fillColor.withOpacity(0.5),
                 borderRadius: BorderRadius.circular(8.r),
                 border: Border.all(
-                  color: AppColors.hinttextColor,
+                  color: AppColors.fillColor,
                 ))),
         focusedPinTheme: PinTheme(
             height: 52.h,
@@ -39,7 +39,7 @@ class OtpWidget extends StatelessWidget {
                 color: AppColors.fillColor,
                 borderRadius: BorderRadius.circular(8.r),
                 border: Border.all(
-                  color: AppColors.hinttextColor,
+                  color: AppColors.fillColor,
                 ))),
       ),
     );

@@ -9,7 +9,7 @@ class BackgroundContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: height,
+      height: height * 0.9,
       width: width,
       decoration: BoxDecoration(
         gradient: LinearGradient(

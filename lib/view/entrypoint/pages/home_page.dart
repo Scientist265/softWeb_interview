@@ -4,13 +4,10 @@ import 'package:interview_one/app/app_style.dart';
 import 'package:interview_one/app/reusable_text.dart';
 import 'package:interview_one/common/extensions.dart';
 import 'package:interview_one/common/heading.dart';
-import 'package:interview_one/common/sizing.dart';
 import 'package:interview_one/view/entrypoint/models/quick_actions.dart';
 import 'package:interview_one/view/entrypoint/pages/new_update_widget.dart';
 import 'package:interview_one/view/entrypoint/pages/quick_action_card.dart';
-
 import '../../../app/background_container.dart';
-import '../../../common/app_assets.dart';
 import '../../../core/config/theme/colors.dart';
 import '../user_card_info_tile.dart';
 

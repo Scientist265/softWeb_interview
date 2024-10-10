@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             title: "SoftWeb",
             theme: ThemeData(
-              scaffoldBackgroundColor: AppColors.darkGreen,
-              iconTheme: IconThemeData(color: AppColors.primaryColor),
+              scaffoldBackgroundColor: AppColors.black,
+              iconTheme: IconThemeData(color: AppColors.cardGradintColorTwo),
               primarySwatch: Colors.grey,
             ),
             home: const LoginScreen(),

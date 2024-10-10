@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../app/app_style.dart';
 import '../core/config/theme/colors.dart';
 
 class PasswordTextField extends StatefulWidget {
@@ -60,7 +61,7 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: widget.margin ?? EdgeInsets.only(bottom: 22.h),
+      margin: widget.margin ?? EdgeInsets.only(bottom: 10.h),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -82,7 +83,10 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
                   height: 8.h,
                 ),
           Container(
-            color: AppColors.fillColor.withOpacity(0.5),
+            decoration: BoxDecoration(
+              color: AppColors.fillColor.withOpacity(0.5),
+              borderRadius: BorderRadius.circular(widget.borderRadius ?? 8.r),
+            ),
             child: TextFormField(
               controller: widget.controller,
               keyboardType: widget.keyboardType,
@@ -92,6 +96,7 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
               focusNode: widget.focusNode,
               onChanged: widget.onchanged,
               textInputAction: TextInputAction.next,
+              style: appStyle(16, AppColors.white, FontWeight.w500),
               decoration: InputDecoration(
                 contentPadding: widget.padding ??
                     EdgeInsets.symmetric(
@@ -106,25 +111,27 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
                 ),
                 border: OutlineInputBorder(
                   borderRadius:
-                      BorderRadius.circular(widget.borderRadius ?? 6.r),
+                      BorderRadius.circular(widget.borderRadius ?? 8.r),
                   borderSide: BorderSide(
-                    color: AppColors.hinttextColor,
+                    color: AppColors.fillColor.withOpacity(0.8),
                     width: 0.3.w,
                   ),
                 ),
                 enabledBorder: OutlineInputBorder(
                   borderRadius:
-                      BorderRadius.circular(widget.borderRadius ?? 6.r),
+                      BorderRadius.circular(widget.borderRadius ?? 8.r),
                   borderSide: BorderSide(
-                    color: widget.borderColor ?? AppColors.hinttextColor,
+                    color: widget.borderColor ??
+                        AppColors.fillColor.withOpacity(0.8),
                     width: 1.w,
                   ),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius:
-                      BorderRadius.circular(widget.borderRadius ?? 6.r),
+                      BorderRadius.circular(widget.borderRadius ?? 8.r),
                   borderSide: BorderSide(
-                    color: widget.focusedBorderColor ?? AppColors.hinttextColor,
+                    color: widget.focusedBorderColor ??
+                        AppColors.fillColor.withOpacity(0.8),
                     width: 1.w,
                   ),
                 ),
@@ -137,12 +144,14 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
                   },
                   child: !obscureText
                       ? Icon(
-                          Icons.visibility_off,
-                          color: AppColors.hinttextColor,
+                          Icons.visibility_off_outlined,
+                          size: 20,
+                          color: AppColors.fillColor.withOpacity(0.4),
                         )
                       : Icon(
-                          Icons.visibility,
-                          color: AppColors.white,
+                          Icons.visibility_outlined,
+                          size: 20,
+                          color: AppColors.hinttextColor,
                         ),
                 ),
               ),

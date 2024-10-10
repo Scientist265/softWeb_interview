@@ -5,8 +5,10 @@ import 'package:interview_one/app/app_style.dart';
 import 'package:interview_one/app/background_container.dart';
 import 'package:interview_one/app/reusable_text.dart';
 import 'package:interview_one/common/extensions.dart';
+import 'package:interview_one/common/gradient_text.dart';
 import 'package:interview_one/common/password_textfield.dart';
 import 'package:interview_one/common/text_field.dart';
+import 'package:interview_one/core/utils/gradient_text.dart';
 import 'package:interview_one/view/auth/create_account_screen.dart';
 import '../../common/global_button.dart';
 import '../../core/config/theme/colors.dart';
@@ -80,8 +82,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       hintText: "Enter Password",
                     ),
                     GestureDetector(
-                      child: Reusabletext(
-                        text: "Forgot password?",
+                      child: Text(
+                        "Forgot password?",
                         style: appStyle(
                           14,
                           AppColors.hinttextColor,
@@ -96,7 +98,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Reusabletext(
-                          text: "I don't have an account,",
+                          text: "I don't have an account, ",
                           style: appStyle(
                               14, AppColors.hinttextColor, FontWeight.w400),
                         ),
@@ -105,10 +107,9 @@ class _LoginScreenState extends State<LoginScreen> {
                             Navigator.of(context)
                                 .pushNamed(CreateAccountScreen.routeName);
                           },
-                          child: Reusabletext(
-                            text: " Create account",
-                            style: appStyle(
-                                14, HexColor("#EF6C57"), FontWeight.w400),
+                          child: GradientText(
+                            text: "Create account",
+                            gradient: buildGradient(),
                           ),
                         ),
                       ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:interview_one/common/extensions.dart';
 import 'package:interview_one/view/auth/widgets/otp_widget.dart';
 import '../../app/app_style.dart';
@@ -61,15 +62,20 @@ class _VerifyOtpPageState extends State<VerifyOtpPage> {
               text: "Please enter the OTP sent to",
               style: appStyle(14, AppColors.hinttextColor, FontWeight.w400),
             ),
+            //TODO:
             Reusabletext(
-              text: widget.email ?? "tolu.example@gmail.com",
+              text: widget.email ?? "tolu.ab19@gmail.com",
               style: appStyle(
                 14,
                 AppColors.white,
-                FontWeight.w500,
+                FontWeight.w600,
               ),
             ),
-            OtpWidget(controller: _otpController)
+            5.ht,
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 20.h),
+              child: OtpWidget(controller: _otpController),
+            )
           ],
         );
       }),

@@ -8,6 +8,8 @@ import 'package:interview_one/core/config/theme/colors.dart';
 import 'package:interview_one/core/utils/gradient_text.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
+import '../../../common/gradient_text.dart';
+
 class UserWalletCard extends StatefulWidget {
   const UserWalletCard({
     super.key,
@@ -23,7 +25,7 @@ class _UserWalletCardState extends State<UserWalletCard> {
   void _copyText(BuildContext context, String text) {
     Clipboard.setData(ClipboardData(text: text));
     Fluttertoast.showToast(
-        msg: "account copied",
+        msg: "Account copied",
         backgroundColor: AppColors.cardGradintColorOne,
         fontSize: 18,
         toastLength: Toast.LENGTH_LONG,
@@ -82,22 +84,37 @@ class _UserWalletCardState extends State<UserWalletCard> {
               ),
               8.ht,
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 5.h),
-                decoration: BoxDecoration(
-                  color: Colors.white54,
-                  borderRadius: BorderRadius.circular(40.r),
-                ),
-                child: RichText(
-                    text: TextSpan(
-                        text: "Cashback ",
+                  padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 2.h),
+                  decoration: BoxDecoration(
+                    color: Colors.white54,
+                    borderRadius: BorderRadius.circular(40.r),
+                  ),
+                  child: Row(
+                    children: [
+                      Reusabletext(
+                        text: "Cashback",
                         style: appStyle(10, AppColors.black, FontWeight.w400),
-                        children: [
-                      TextSpan(
-                          text: "N341.21",
-                          style:
-                              TextStyle(color: AppColors.cardGradintColorTwo))
-                    ])),
-              )
+                      ),
+                      5.wt,
+                      GradientText(
+                        text: 'N341.51',
+                        fw: FontWeight.bold,
+                        gradient: buildGradient(),
+                      )
+                    ],
+                  )
+
+                  //  RichText(
+                  //     text: TextSpan(
+                  //         text: "Cashback ",
+                  //         style: appStyle(10, AppColors.black, FontWeight.w400),
+                  //         children: [
+                  //       TextSpan(
+                  //           text: "N341.21",
+                  //           style:
+                  //               TextStyle(color: AppColors.cardGradintColorTwo))
+                  //     ])),
+                  )
             ],
           ),
           Container(

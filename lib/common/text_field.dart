@@ -76,7 +76,10 @@ class _GlobalTextFieldState extends State<GlobalTextField> {
           ),
           widget.label == null ? 0.ht : 8.ht,
           Container(
-            color: AppColors.fillColor.withOpacity(0.5),
+            decoration: BoxDecoration(
+              color: AppColors.fillColor.withOpacity(0.5),
+              borderRadius: BorderRadius.circular(widget.borderRadius ?? 8.r),
+            ),
             child: TextFormField(
               controller: widget.controller,
               keyboardType: widget.keyboardType,
@@ -94,7 +97,7 @@ class _GlobalTextFieldState extends State<GlobalTextField> {
                         vertical: 8.h,
                         horizontal: 12.w,
                       ),
-                  fillColor: AppColors.fillColor,
+                  fillColor: AppColors.fillColor.withOpacity(0.8),
                   hintText: widget.hintText,
                   hintStyle: appStyle(
                     16,
@@ -103,26 +106,27 @@ class _GlobalTextFieldState extends State<GlobalTextField> {
                   ),
                   border: OutlineInputBorder(
                     borderRadius:
-                        BorderRadius.circular(widget.borderRadius ?? 6.r),
+                        BorderRadius.circular(widget.borderRadius ?? 8.r),
                     borderSide: BorderSide(
-                      color: AppColors.hinttextColor.withOpacity(0.9),
+                      color: AppColors.fillColor.withOpacity(0.8),
                       width: 0.3.w,
                     ),
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius:
-                        BorderRadius.circular(widget.borderRadius ?? 6.r),
+                        BorderRadius.circular(widget.borderRadius ?? 8.r),
                     borderSide: BorderSide(
-                      color: widget.borderColor ?? AppColors.hinttextColor,
+                      color: widget.borderColor ??
+                          AppColors.fillColor.withOpacity(0.8),
                       width: 1.w,
                     ),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius:
-                        BorderRadius.circular(widget.borderRadius ?? 6.r),
+                        BorderRadius.circular(widget.borderRadius ?? 8.r),
                     borderSide: BorderSide(
-                      color:
-                          widget.focusedBorderColor ?? AppColors.hinttextColor,
+                      color: widget.focusedBorderColor ??
+                          AppColors.fillColor.withOpacity(0.8),
                       width: 1.w,
                     ),
                   ),

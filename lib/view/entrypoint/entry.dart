@@ -74,8 +74,8 @@ class EntryPoint extends ConsumerWidget {
               bottom: 60.h,
               right: 15.w,
               child: Container(
-                height: 44.h,
-                width: 44.w,
+                height: 52.h,
+                width: 52.w,
                 decoration: BoxDecoration(
                   gradient: buildGradient(),
                   shape: BoxShape.circle,
