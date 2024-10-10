@@ -72,11 +72,13 @@ class _UserWalletCardState extends State<UserWalletCard> {
                     },
                     child: !obscureText
                         ? Icon(
-                            Icons.visibility_off,
-                            color: AppColors.hinttextColor,
+                            Icons.visibility_off_outlined,
+                            size: 20,
+                            color: AppColors.white.withOpacity(0.7),
                           )
                         : Icon(
-                            Icons.visibility,
+                            Icons.visibility_outlined,
+                            size: 20,
                             color: AppColors.white,
                           ),
                   ),
@@ -84,37 +86,28 @@ class _UserWalletCardState extends State<UserWalletCard> {
               ),
               8.ht,
               Container(
-                  padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 2.h),
-                  decoration: BoxDecoration(
-                    color: Colors.white54,
-                    borderRadius: BorderRadius.circular(40.r),
-                  ),
-                  child: Row(
-                    children: [
-                      Reusabletext(
-                        text: "Cashback",
-                        style: appStyle(10, AppColors.black, FontWeight.w400),
-                      ),
-                      5.wt,
-                      GradientText(
-                        text: 'N341.51',
-                        fw: FontWeight.bold,
-                        gradient: buildGradient(),
-                      )
-                    ],
-                  )
-
-                  //  RichText(
-                  //     text: TextSpan(
-                  //         text: "Cashback ",
-                  //         style: appStyle(10, AppColors.black, FontWeight.w400),
-                  //         children: [
-                  //       TextSpan(
-                  //           text: "N341.21",
-                  //           style:
-                  //               TextStyle(color: AppColors.cardGradintColorTwo))
-                  //     ])),
-                  )
+                padding: EdgeInsets.symmetric(
+                  horizontal: 10.w,
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.white54,
+                  borderRadius: BorderRadius.circular(40.r),
+                ),
+                child: Row(
+                  children: [
+                    Reusabletext(
+                      text: "Cashback",
+                      style: appStyle(11, AppColors.black, FontWeight.w400),
+                    ),
+                    5.wt,
+                    GradientText(
+                      text: 'N341.51',
+                      fw: FontWeight.bold,
+                      gradient: buildGradient(),
+                    )
+                  ],
+                ),
+              ),
             ],
           ),
           Container(

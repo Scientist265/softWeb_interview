@@ -10,6 +10,7 @@ import 'package:interview_one/common/password_textfield.dart';
 import 'package:interview_one/common/text_field.dart';
 import 'package:interview_one/core/utils/gradient_text.dart';
 import 'package:interview_one/view/auth/create_account_screen.dart';
+import 'package:interview_one/view/entrypoint/entry.dart';
 import '../../common/global_button.dart';
 import '../../core/config/theme/colors.dart';
 
@@ -92,7 +93,10 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                     20.ht,
-                    GlobalButton(onPressed: () {}, label: "Sign in"),
+                    GlobalButton(onPressed: () {
+                       Navigator.of(context)
+                                .pushNamed(EntryPoint.routeName);
+                    }, label: "Sign in"),
                     5.ht,
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,

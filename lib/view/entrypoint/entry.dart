@@ -80,7 +80,10 @@ class EntryPoint extends ConsumerWidget {
                   gradient: buildGradient(),
                   shape: BoxShape.circle,
                 ),
-                child: const Icon(AppIcons.message),
+                child: Icon(
+                  AppIcons.message,
+                  color: AppColors.white,
+                ),
               ),
             ),
           ],
